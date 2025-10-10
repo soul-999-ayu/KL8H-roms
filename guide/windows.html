@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Flashing Guide - KL8h ROMs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-color: #1e1e1e;
+            --primary-color: #bb86fc;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --border-color: #333;
+            --warning-bg: #442323;
+            --warning-border: #ff5252;
+            --info-bg: #233a44;
+            --info-border: #29b6f6;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; line-height: 1.7; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; }
+        header h1 { color: var(--primary-color); font-size: 2.5em; margin-bottom: 0; }
+        .back-link { display: inline-block; color: var(--primary-color); text-decoration: none; margin-bottom: 30px; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        .guide-step { background-color: var(--card-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 25px; margin-bottom: 30px; }
+        .guide-step h2 { margin-top: 0; font-size: 1.8em; color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; }
+        .notice { padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+        .warning { background-color: var(--warning-bg); border-left: 5px solid var(--warning-border); }
+        .warning strong { color: var(--warning-border); }
+        .info { background-color: var(--info-bg); border-left: 5px solid var(--info-border); }
+        .info strong { color: var(--info-border); }
+        p, ul { color: var(--text-secondary); }
+        code { font-family: 'Roboto Mono', monospace; background-color: #2c2c2c; padding: 3px 6px; border-radius: 4px; font-size: 0.9em; }
+        pre { background-color: #0d0d0d; border: 1px solid var(--border-color); padding: 20px; border-radius: 8px; white-space: pre-wrap; word-wrap: break-word; font-size: 0.95em; }
+        pre code { background-color: transparent; padding: 0; }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖥️ Windows Flashing Guide</h1>
+        </header>
+
+        <a href="../index.html" class="back-link">&larr; Back to ROMs List</a>
+
+        <main>
+            <div class="guide-step">
+                <h2>Disclaimer & Prerequisites</h2>
+                <div class="notice warning">
+                    <strong>Warning:</strong> Flashing a custom ROM can brick your device. This process will completely wipe all your data. Proceed at your own risk. Always have a backup!
+                </div>
+                <p>Before you begin, ensure you have:</p>
+                <ul>
+                    <li>An unlocked bootloader.</li>
+                    <li>The ROM <code>.zip</code> file extracted on your PC.</li>
+                    <li>ADB and Fastboot drivers installed on your system.</li>
+                </ul>
+            </div>
+
+            <div class="guide-step">
+                <h2>Part 1: Flashing the ROM</h2>
+                <p>1. Enable <strong>USB Debugging</strong> from developer options and connect your phone to your PC.</p>
+                <p>2. Navigate to the folder where you extracted the ROM files.</p>
+                <p>3. Double-click and run the <code>installer.bat</code> script.</p>
+                <div class="notice info">
+                    <strong>Follow the on-screen instructions</strong> provided by the script carefully. It will handle the entire flashing process automatically.
+                </div>
+                <p>Once the script finishes, your phone will reboot. The first boot can take several minutes.</p>
+            </div>
+
+            <div class="guide-step">
+                <h2>Part 2: Post-Flash Setup & Patching</h2>
+                <div class="notice info">
+                    <strong>IMPORTANT:</strong> After your device boots into the new ROM, complete the initial setup. Then, you must re-enable Developer Options. Go to <strong>Settings > About phone</strong> and tap the <strong>Build number</strong> 7 times.
+                </div>
+                <div class="notice warning">
+                    <strong>CRITICAL STEP:</strong> Before running the patching script, go to <strong>Settings > System > Developer options</strong> and enable both <strong>USB debugging</strong> and <strong>Rooted debugging</strong>. The script will fail otherwise.
+                </div>
+                <p>1. With your phone booted into the system, connect it to your PC.</p>
+                <p>2. Navigate back to the extracted ROM folder.</p>
+                <p>3. Double-click and run the <code>patch.bat</code> script.</p>
+                <p>Follow the instructions in the command window and provide inputs carefully when prompted. After the script is done, your device is fully set up!</p>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://telegra.ph/Donations-07-09-7" target="_blank">Donate</a>
+                <a href="https://t.me/tecnospark30cchat" target="_blank">Support</a>
+                <a href="https://t.me/tecnospark30c" target="_blank">Channel</a>
+                <a href="https://t.me/@dev_ayu" target="_blank">Developer</a>
+            </div>
+            <p>Maintained with ❤️ by <a href="https://t.me/@dev_ayu"  target="_blank" style="text-decoration: none; color: var(--primary-color);">Ayu Kashyap</a> for the KL8h community.</p>
+            <p class="copyright">&copy; 2025 KL8h Community. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

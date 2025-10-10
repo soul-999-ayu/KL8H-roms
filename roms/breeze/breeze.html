@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreezeOS Details - KL8h ROMs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-color: #1e1e1e;
+            --primary-color: #bb86fc;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --border-color: #333;
+            --warning-bg: #442323;
+            --warning-border: #ff5252;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; line-height: 1.7; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .back-link { display: inline-block; color: var(--primary-color); text-decoration: none; margin-bottom: 30px; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        
+        .rom-header { text-align: center; margin-bottom: 40px; }
+        .rom-header h1 { font-size: 2.8em; color: var(--primary-color); margin-bottom: 5px; }
+        .rom-header p { font-size: 1.1em; color: var(--text-secondary); max-width: 700px; margin: 0 auto; }
+        
+        .section { background-color: var(--card-color); border: 1px solid var(--border-color); border-radius: 10px; padding: 25px; margin-bottom: 30px; }
+        .section h2 { margin-top: 0; font-size: 1.8em; color: var(--text-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 20px; }
+
+        .rom-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+        .details-list { list-style: none; padding: 0; margin: 0; }
+        .details-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-color); }
+        .details-list li:last-child { border: none; }
+        .details-list span { color: var(--text-secondary); }
+        .actions-card { display: flex; flex-direction: column; gap: 15px; }
+        .action-btn { display: block; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; transition: transform 0.2s ease; }
+        .action-btn:hover { transform: scale(1.03); }
+        .download-btn { background-color: var(--primary-color); color: #121212; }
+        .telegram-btn { background-color: #2AABEE; color: #fff; }
+
+        /* --- New Screenshot Gallery Styles --- */
+        .screenshot-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 15px; /* Makes space for scrollbar */
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: var(--primary-color) var(--border-color); /* Firefox */
+        }
+        /* Webkit (Chrome, Safari) Scrollbar Styles */
+        .screenshot-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        .screenshot-gallery::-webkit-scrollbar-track {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        .screenshot-gallery::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .screenshot-item {
+            flex: 0 0 260px; /* Prevents shrinking, sets base width */
+        }
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        /* --- End New Styles --- */
+
+        .feature-list { list-style: '✓ '; padding-left: 20px; }
+        .feature-list li { margin-bottom: 8px; }
+        .warning { background-color: var(--warning-bg); border-left: 5px solid var(--warning-border); padding: 20px; border-radius: 5px; }
+
+        footer { text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9em; }
+        .footer-links { margin-bottom: 20px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .footer-links a:hover { color: var(--primary-color); }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+
+        @media (max-width: 600px) {
+            .rom-details-grid { grid-template-columns: 1fr; }
+            .screenshot-item { flex: 0 0 220px; } /* Slightly smaller on mobile */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-link">&larr; Back to ROMs List</a>
+
+        <header class="rom-header">
+            <h1>BreezeOS</h1>
+            <p>BreezeOS is a custom rom known for smoothness and stability. Its debloated and packed with pixel goodies</p>
+        </header>
+
+        <main>
+            <div class="section">
+                <div class="rom-details-grid">
+                    <div class="details-card">
+                        <ul class="details-list">
+                            <li><span>Version:</span> <strong>TD16 Beta 26</strong></li>
+                            <li><span>Android Version:</span> <strong>16 (Baklava)</strong></li>
+                            <li><span>Build Date:</span> <strong>2025-09-30</strong></li>
+                            <li><span>Maintainer:</span> <strong>Ayu Kashyap</strong></li>
+                            <li><span>Status:</span> <strong>Stable</strong></li>
+                        </ul>
+                    </div>
+                    <div class="actions-card">
+                        <a href="https://t.me/tecnospark30cchat/1428" target="_blank" class="action-btn download-btn">Download ROM</a>
+                        <a href="https://t.me/tecnospark30c/30" target="_blank" class="action-btn telegram-btn">Telegram Channel</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Screenshots</h2>
+                <div class="screenshot-gallery">
+                    <div class="screenshot-item"><img src="1.jpg" alt="Home Screen"></div>
+                    <div class="screenshot-item"><img src="2.jpg" alt="App Drawer"></div>
+                    <div class="screenshot-item"><img src="3.jpg" alt="About Phone"></div>
+                    <div class="screenshot-item"><img src="4.jpg" alt="Model"></div>
+                    <div class="screenshot-item"><img src="5.jpg" alt="QS Pannel"></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Key Features</h2>
+                <ul class="feature-list">
+                    <li>Clean UI experience and features</li>
+                    <li>Highly debloated for smoothness</li>
+                    <li>Enhanced performance and battery optimizations</li>
+                    <li>Latest Security Patch</li>
+                    <li>SafetyNet passes by using a valid keybox</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Changelog</h2>
+                <ul class="feature-list">
+                    <li>Fixed flashing script</li>
+                    <li>Fixed HDR</li>
+                    <li>Added GPhotos for GCam Crash fix</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Known Issues</h2>
+                <div class="warning">
+                    <ul class="feature-list" style="padding-left: 20px; margin: 0;">
+                        <li>
+                            <strong>Double tap to wake:</strong> Device side fixes needed.
+                        </li>
+                        <li>
+                            <strong>48MP Camera:</strong> Use OpenCamera to shoot video in 1440p and capture 12MP photos.
+                        </li>
+                        <li>
+                            <strong>Dual speaker use in music/audio:</strong> Device side changes needed.
+                        </li>
+                        <li>
+                            <strong>Random reboot:</strong> JEMALLOC and UBSAN fixes needed.
+                        </li>
+                    </ul>
+                    <p style="margin-top: 15px; margin-bottom: 0;">Please report any other bugs you find in the official Telegram group!</p>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer>
+            <div class="footer-links">
+                <a href="https://telegra.ph/Donations-07-09-7" target="_blank">Donate</a>
+                <a href="https://t.me/tecnospark30cchat" target="_blank">Support</a>
+                <a href="https://t.me/tecnospark30c" target="_blank">Channel</a>
+                <a href="https://t.me/@dev_ayu" target="_blank">Developer</a>
+            </div>
+            <p>Maintained with ❤️ by <a href="https://t.me/@dev_ayu"  target="_blank" style="text-decoration: none; color: var(--primary-color);">Ayu Kashyap</a> for the KL8h community.</p>
+            <p class="copyright">&copy; 2025 KL8h Community. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
